@@ -30,7 +30,8 @@ for i in range(0,len(data)):
     geneid = dic["id"]
     cons_type = dic["consequence_type"]
     clin_sig = dic["clinical_significance"]
+    cons_type_new = cons_type.replace("_"," ")
     if clin_sig:
-       print "Variant" + "\t" + geneid  + "\t" +  "is a" + "\t" + cons_type + "\t"+  "and is clinically" + "\t" +  clin_sig[0].upper() 
+       print "Variant" + "\t" + geneid  + "\t" +  "is a" + "\t" + cons_type_new + "\t"+  "and is clinically" + "\t" +  clin_sig[0].upper() 
     else:
-       print "Variant" + "\t" + geneid  + "\t" +  "is a" + "\t" + cons_type
+       print "Variant" + "\t" + geneid  + "\t" +  "is a" + "\t" + cons_type_new 
